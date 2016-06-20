@@ -1,0 +1,88 @@
+/************************************************************************* Global Style */
+html {
+    height: 100%;
+    width: 100%
+}
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background: #eee;
+    font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.4em;
+    margin: 0 auto;
+}
+/************************************************************************* Common Style */
+.pl5 { padding-left: 5px; }
+.pl10 { padding-left: 10px; }
+.pl15 { padding-left: 15px; }
+.pr5 { padding-right: 5px; }
+.pr10 { padding-right: 10px; }
+.pr15 { padding-right: 15px; }
+
+.ml5 { margin-left: 5px; }
+.ml10 { margin-left: 10px; }
+.ml15 { margin-left: 15px; }
+.mr5 { margin-right: 5px; }
+.mr10 { margin-right: 10px; }
+.mr15 { margin-right: 15px; }
+.mt15 { margin-top: 15px; }
+
+.disable { cursor: not-allowed; opacity: 0.3; }
+.fl { float: left; } .fr { float: right; } .clear { clear: both; }
+.tl { text-align: left; } .tc { text-align: center; } .tr { text-align: right; }
+
+/************************************************************************* Customerized Style */
+.note-container {
+    background: #fff;
+}
+.note-input-container {
+    margin: 10px auto 20px 0;
+    width: 90%;
+}
+.note-input-container>.note-input-memo {
+    margin-top: 5px;
+}
+.note-input-container>input[type=text] {
+    width: 466px;
+    font-size: 24px;
+    font-family: inherit;
+    line-height: 1.4em;
+    border: 0;
+    outline: none;
+    padding: 6px;
+    border: 1px solid #999999;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
+    -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
+    -ms-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
+    -o-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
+}
+.note-input-memo>input[type=checkbox] {
+    margin-right: 5px;
+}
+.note-list {
+
+}
+.note-list input[type=checkbox] {
+    margin-right: 5px;
+}
+.edit-input {
+    width: 100%;
+    font-size: 20px;
+    font-family: inherit;
+    line-height: 1.2em;
+    border: 0;
+    outline: none;
+    padding: 4px;
+    border: 1px solid #999999;
+}
+.list-group-item .badge {
+    float: right;
+}
+.list-group-item .list-note-item {
+    font-size: 20px;
+    font-family: inherit;
+    line-height: 1.2em;
+    padding: 4px;
+}

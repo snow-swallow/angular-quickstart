@@ -1,0 +1,25 @@
+{
+  "name": "angular-quicstart",
+  "description": "for angular study",
+  "main": "",
+  "authors": [
+    "Yu Zhu Xu <timely.xyz@163.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "angular-cookies": "^1.5.7",
+    "underscore": "^1.8.3",
+    "normalize-css": "normalize.css#^4.1.1",
+    "angular": "^1.5.7",
+    "angular-ui-router": "^0.3.1"
+  }
+}

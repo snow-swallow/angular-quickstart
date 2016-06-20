@@ -1,0 +1,46 @@
+<div class="container" ng-init="init()">
+    <div class="row">
+        <div class="col-md-3">&nbsp;</div>
+        <div class="col-md-6 note-container">
+            <div class="page-header">
+                <h1>Todos</h1>
+            </div>
+            <div class="note-input-container">
+                <input type="text" placeholder="What needs to be done?" ng-model="newNote" ng-keyup="createNote($event)" />
+                <div class="note-input-memo">
+                    <input type="checkbox" ng-model="isAllDone" id="checkbox"><label for="checkbox">Mark all as complete</label>
+                </div>
+            </div>
+            <div class="note-list container-fluid">
+                <div class="row">
+                    <ul class="list-group">
+                        <li class="list-group-item" ng-repeat="note in noteList">
+                            <div class="list-note-item" ng-show="!note.onEditing">
+                                <span class="badge" ng-click="deleteNote(note)">X</span>
+                                <input type="checkbox" ng-model="note.isDone" ng-change="editNote(note)" />
+                                <span style="{{note.isDone ? 'text-decoration: line-through' : ''}}" ng-dblclick="note.onEditing = !note.onEditing">{{note.content}}</span>
+                            </div>
+                            <div ng-show="note.onEditing">
+                                <input type="text" class="edit-input" ng-model="note.content" ng-blur="editNote(note)" />
+                            </div>
+                        </li>
+                        <li class="list-group-item list-group-item-success">
+                            <span>{{noteList.length - doneList.length}} items left</span>
+                            <span class="badge" ng-click="clearDoneList()">Clear {{doneList.length}} completed items</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">&nbsp;</div>
+    </div>
+    <div class="row mt15">
+        <div class="col-md-12 tc">Double-click to edit a todo.</div>
+    </div>
+    <div class="row mt15">
+        <div class="col-md-12 tc"><button ng-click="deleteAll()">clear cache</button></div>
+    </div>
+    <div class="row mt15">
+        <div class="col-md-12 tc">Created by Xu Yu Zhu.</div>
+    </div>
+</div>
