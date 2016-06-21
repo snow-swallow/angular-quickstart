@@ -9,7 +9,7 @@ angular.module('myApp')
     };
 
     $scope.createNote = function (event) {
-      if (event.which == 13) { // press "Enter"
+      if (event.which == 13 && $scope.newNote.length > 0) { // press "Enter"
         NoteService.create($scope.newNote);
         $scope.newNote = '';
         console.log($scope.noteList.length);

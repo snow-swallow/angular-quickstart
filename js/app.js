@@ -6,20 +6,12 @@ angular.module('myApp', ['ui.router', 'ngCookies']).config(function($stateProvid
   $urlRouterProvider.otherwise('note');
 
   $stateProvider
-    .state('index', {
-      url: '/index',
-      templateUrl:"view/index.html",
-      cache: true,
-      controller: function($scope, $state) {
-        console.log("enter index");
-      }
-    })
     .state('page1', {
       url: '/page1',
       templateUrl:"view/page1.html",
       cache: true,
       controller: function($scope, $state) {
-        console.log("enter page1");
+        console.log("-----enter page1-----");
       }
     })
     .state('page2', {
@@ -28,7 +20,6 @@ angular.module('myApp', ['ui.router', 'ngCookies']).config(function($stateProvid
       cache: true,
       controller: function($scope, $state) {
         console.log("-----enter page2------");
-        // $scope.currentTime = Date();
       }
     })
     .state('note', {
@@ -38,12 +29,3 @@ angular.module('myApp', ['ui.router', 'ngCookies']).config(function($stateProvid
       controller: 'NoteController'
     });
 });
-// angular.module('myApp').run(['$rootScope', '$window', '$location', '$log','$templateCache', '$state',
-//   function ($rootScope, $window, $location, $log, $templateCache, $state) {
-//
-//     $rootScope.render = function() {
-//       console.log('render');
-//       $state.go('/page1', {reload: false});
-//     };
-//
-// }]);
