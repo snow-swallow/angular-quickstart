@@ -26,6 +26,12 @@ gulp.task('clean', function() {
   return del(['./build', paths.templates]);
 });
 
+gulp.task('jshint', function() {
+  gulp.src(paths.js)
+      .pipe(jshint())
+      .pipe(jshint.reporter('default'));
+});
+
 gulp.task('template', function () {
   return gulp.src('./view/**/*.html')
       .pipe(templateCache({module: 'myApp'}))
@@ -120,6 +126,6 @@ gulp.task('develop', function () {
 
 var deployEnvironment = Environment.DEV;
 // set target environment
-gulp.task('default', ['clean'], function() {
+gulp.task('default', ['clean', 'jshint'], function() {
   gulp.run('develop');
 });

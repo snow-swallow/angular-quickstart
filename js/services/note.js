@@ -4,7 +4,7 @@ angular.module('myApp')
     var noteList = $cookieStore.get('Notes') || [];
 
     service.generateOrder = function () {
-      if (noteList.length == 0) {
+      if (noteList.length === 0) {
         return 0;
       } else {
         return noteList[noteList.length - 1].order + 1;

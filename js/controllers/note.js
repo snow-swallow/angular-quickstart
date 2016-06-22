@@ -4,7 +4,7 @@ angular.module('myApp')
       $scope.newNote = '';
       $scope.noteList = NoteService.fetchList();
       $scope.doneList = _.filter($scope.noteList, function (note) {
-        return note.isDone == true;
+        return note.isDone === true;
       });
     };
 
@@ -38,13 +38,12 @@ angular.module('myApp')
 
     var noteListWatcher = $scope.$watch('noteList', function(newVal, oldVal) {
       $scope.doneList = _.filter($scope.noteList, function (note) {
-        return note.isDone == true;
+        return note.isDone === true;
       });
-      console.log($scope.doneList)
     }, true);
 
     var allDoneWatcher = $scope.$watch('isAllDone', function(newVal, oldVal) {
-      if (newVal != undefined) {
+      if (newVal !== undefined) {
         console.log('trigger isAllDone watcher');
         _.each($scope.noteList, function(item) {
           item.isDone = newVal;
