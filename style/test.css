@@ -1,0 +1,4 @@
+/*** test for css build **/
+.div#test {
+    color: red;
+}

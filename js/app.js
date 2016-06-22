@@ -12,6 +12,7 @@ angular.module('myApp', ['ui.router', 'ngCookies']).config(function($stateProvid
       cache: true,
       controller: function($scope, $state) {
         console.log("-----enter page1-----");
+        var a = '';
       }
     })
     .state('page2', {
