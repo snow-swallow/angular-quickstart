@@ -8,7 +8,7 @@ angular.module('myApp', ['ui.router', 'ngCookies']).config(function($stateProvid
   $stateProvider
     .state('page1', {
       url: '/page1',
-      templateUrl:"view/page1.html",
+      templateUrl:"views/partials/page1.html",
       cache: true,
       controller: function($scope, $state) {
         console.log("-----enter page1-----");
@@ -17,7 +17,7 @@ angular.module('myApp', ['ui.router', 'ngCookies']).config(function($stateProvid
     })
     .state('page2', {
       url: '/page2',
-      templateUrl:"view/page2.html",
+      templateUrl:"views/partials/page2.html",
       cache: true,
       controller: function($scope, $state) {
         console.log("-----enter page2------");
@@ -25,8 +25,9 @@ angular.module('myApp', ['ui.router', 'ngCookies']).config(function($stateProvid
     })
     .state('note', {
       url: '/note',
-      templateUrl:"view/note.html",
+      templateUrl:"views/partials/note.html",
       cache: true,
       controller: 'NoteController'
     });
+
 });
